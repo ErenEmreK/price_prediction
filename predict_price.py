@@ -1,7 +1,7 @@
 import pandas as pd
 
 def get_symbols():
-    #May have usage limit
+    #TODO May have usage limit, so save symbols to a file
     #We return sample for now 
     
     """
