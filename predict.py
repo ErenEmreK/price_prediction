@@ -34,11 +34,4 @@ def preprocess(df):
     #convert dates to integer, then rescales them between 0 and 1
     df['Date'] = [date_to_int(date) for date in df['Date']]
     
-    scaler = MinMaxScaler(feature_range=(0, 1))
-    scaled_df = scaler.fit_transform(df)
-    
-    return scaled_df
-    
-df = pd.read_csv('data/yf_attributes/AAPL.csv')
-scaled_df = preprocess(df)
-print(scaled_df.shape)
+    return 

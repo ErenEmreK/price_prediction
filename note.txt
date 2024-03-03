@@ -1,2 +1,4 @@
 getting yf.recommendations for past months and looking how well they yield fruits,
 and getting current ones as 
+
+do something with football data	
