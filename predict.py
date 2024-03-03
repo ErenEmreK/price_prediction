@@ -31,17 +31,14 @@ def train_test_split(X, y, test_ratio):
     return X_train, y_train, X_test, y_test
 
 def preprocess(df):
-    #convert dates to integer, splits data to to X and y
+    #convert dates to integer, then rescales them between 0 and 1
     df['Date'] = [date_to_int(date) for date in df['Date']]
     
-    scaler = MinMaxScaler()
+    scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_df = scaler.fit_transform(df)
-    #X_df, y_df = scaled_df.drop(columns=['Close']), df['Close']
     
     return scaled_df
     
-"""
-for df in df_yielder('data/yf_attributes'):
-    X_train, y_train, X_test, y_test = test_train_split(df)
-    #TODO train the model
-    """
+df = pd.read_csv('data/yf_attributes/AAPL.csv')
+scaled_df = preprocess(df)
+print(scaled_df.shape)
