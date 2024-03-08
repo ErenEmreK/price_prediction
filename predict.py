@@ -1,9 +1,7 @@
-import tensorflow as tf
-from tensorflow import keras
 import os
 import pandas as pd
 from datetime import datetime
-from sklearn.preprocessing import MinMaxScaler
+import numpy as np
 
 def date_to_int(str_date):
     #converts 'YYYY-MM-DD' to integer
@@ -35,3 +33,11 @@ def preprocess(df):
     df['Date'] = [date_to_int(date) for date in df['Date']]
     
     return 
+
+def create_sequences(scaled_X, scaled_y, timestep):
+    X, y = [], []
+    for i in range(len(scaled_X) - timestep):
+        X.append(scaled_X[i:i + timestep]) #Using all data between timesteps
+        y.append(scaled_y[i + timestep]) #Using next timesteps close data as target
+    
+    return np.array(X), np.array(y)
