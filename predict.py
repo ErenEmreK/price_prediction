@@ -18,14 +18,11 @@ def df_yielder(folder):
             
             yield df
             
-def train_test_split(X, y, test_ratio):
-    #we are going to save last %20 as test data
-    #TODO experiment with reverse splitting
-    split_point = int((1 - test_ratio) * len(y))
-    
-    X_train, y_train = X.iloc[:split_point], y.iloc[:split_point]
-    X_test, y_test = X.iloc[split_point:], y.iloc[split_point:]
-    
+def train_test_split(X, y, train_ratio):
+    split_point = int(train_ratio * len(X))
+    X_train, y_train = X[:split_point], y[:split_point]
+    X_test, y_test = X[split_point:], y[split_point:]
+
     return X_train, y_train, X_test, y_test
 
 def preprocess(df):
