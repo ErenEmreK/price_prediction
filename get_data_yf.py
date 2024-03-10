@@ -9,7 +9,7 @@ def get_symbols():
     
     #we return small set for now
     symbols = ['AAPL', 'MSFT', 'XWEL', 'YJ', 'YHGJ', 'ZEUS', 'XTLB', 'IBM',
-               'NFLX', 'V', 'CRM', 'DIS', 'TSLA', 'BA', 'AMZN', 'CRM',
+               'NFLX', 'V', 'CRM', 'DIS', 'TSLA', 'BA', 'AMZN', 'CRM', 'FB'
                'INTC', 'BABA', 'HD', 'PYPL', 'NKE', 'XOM', 'CSCO', 'MRK', 'UNH']
     return symbols
 
