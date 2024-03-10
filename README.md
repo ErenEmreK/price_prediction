@@ -18,12 +18,15 @@ Fairly straightforward, it gets number of sell and buy advices from analysts in 
 `Scikit-learn`
 
 ## Graphs
+Here are some prediction graphics on **APPLE**'s stock prices.
 
 ![Using Daily Data](data/graphs/by_day_pred.png)
 
 ![Using Monthly Data](data/graphs/by_month_pred.png)
 
 ![Using Daily Data -only price values-](data/graphs/only_price_pred.png)
+
+Some recommendation score examples. 
 
 ![Analyst Data Examples](data/graphs/recommendations.png)
 
@@ -45,5 +48,6 @@ I want to provide more in-depth explanation and commentary here when i have the 
 ## Contact Info
 
 Email: erenemrekistin@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/erenemrekistin/
 
