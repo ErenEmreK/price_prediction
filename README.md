@@ -1,5 +1,5 @@
 # Stock Price Prediction with LSTM 
-Includes LSTM models that predicts prices for a stock based on time-step sequences, trained based on  20 years of data of **Open, High, Low, Close, Adj Close and Volume** values for a company. (I added one model that only use Close prices since it reduces noise and gives pretty decent results, around 0. 00078 MSE.) It also shows predicting models accuracy difference between monthly seperated dataset and daily one.  (One model uses monthly data whereas other uses daily.)
+Includes LSTM models that predicts prices for a stock based on time-step sequences, trained based on  20 years of data of **Open, High, Low, Close, Adj Close and Volume** values for a company. (I added one model that only use Close prices since it reduces noise and gives pretty decent results, with MSE of **0.00013706025492865592**.) It also shows predicting models accuracy difference between monthly seperated dataset and daily one.  (One model uses monthly data whereas other uses daily.)
 # Recommendations from Analysts
 Since ML models can not be of use when forecasting the future price for a stock share due to vast vagueness of financial markets, i made a silly project using Yfinance's recommendation method out of curiosity. 
 
