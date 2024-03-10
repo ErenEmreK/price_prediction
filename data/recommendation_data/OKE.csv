@@ -1,0 +1,5 @@
+period,strongBuy,buy,hold,sell,strongSell
+0m,2,2,12,0,0
+-1m,4,7,10,0,0
+-2m,4,7,9,0,1
+-3m,2,5,13,0,1

@@ -8,22 +8,15 @@ recommendation_data_folder_path = 'data/recommendation_data'
 
 def get_symbols():
     #Gets all symbols in listing status file
-    df = pd.read_csv('data/listing_status2.csv')
+    df = pd.read_csv('data/listing_status.csv')
     symbols = df['symbol'].tolist()
-    return symbols
-
-def get_symbols_sample(): 
-    #returns a small sample set
-    symbols = ['AAPL', 'MSFT', 'XWEL', 'YJ', 'YHGJ', 'ZEUS', 'XTLB', 'IBM',
-               'NFLX', 'V', 'CRM', 'DIS', 'TSLA', 'BA', 'AMZN', 'CRM', 'FB',
-               'INTC', 'BABA', 'HD', 'PYPL', 'NKE', 'XOM', 'CSCO', 'MRK', 'UNH']
-
     return symbols
     
 def write_recommendation_data(recommendation_data_folder_path):
     #Writing all to seperate files is not so memory efficient
     #But it comes handy in error situations
     symbols = get_symbols()
+    
     for symbol in symbols:
         recommendations = yf.Ticker(symbol).recommendations
         if recommendations.empty:
@@ -31,7 +24,7 @@ def write_recommendation_data(recommendation_data_folder_path):
             continue
         recommendations.to_csv(f'{recommendation_data_folder_path}/{symbol}.csv', index=False)
     print("Recommendations have been written.")
-    
+   
 def get_data(symbols):
     for symbol in symbols:
         hist = yf.download(symbol, period='max', interval=INTERVAL)
